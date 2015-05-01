@@ -18,6 +18,38 @@
         text-overflow: ellipsis;
         width: 400px;
       }
+      #results {
+        font-family: Arial, Helvetica, sans-serif;
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        margin-top: -195px;
+        height: 380px;
+        width: 200px;
+        padding: 5px;
+        z-index: 1;
+        border: 1px solid #999;
+        background: #fff;
+      }
+      h2 {
+        font-size: 22px;
+        margin: 0 0 5px 0;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        height: 321px;
+        width: 200px;
+        overflow-y: scroll;
+      }
+      li {
+        background-color: #f1f1f1;
+        padding: 10px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
     </style>
 	<title>GoogleMap Test</title>	
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?libraries=places&sensor=false"></script>
@@ -27,8 +59,9 @@
 <body>
 	<div id="mapCanvas"></div>
 	<input id="pac-input" class="controls" type="text" placeholder="Search Box">
-	<ul data-bind="foreach: placeList">
-		<li data-bind="text: name"></li>
-	</ul>
+	<div id="results">
+   <h2>Results</h2> 
+   <ul id="places"></ul>
+  </div>
 </body>
 </html>
