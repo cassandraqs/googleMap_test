@@ -50,14 +50,6 @@ function initialize() {
         infowindow.setContent(info.formatted_address);
         infowindow.open(map, this);
       });
-      var ViewModel = function() {
-        var self = this;
-        this.placeList = ko.observableArray([]);
-        places.forEach(function(placeItem) {
-          self.placeList.push(placeItem);
-        });
-        console.log(this.placeList()[0]);
-      }
     }
 
 
